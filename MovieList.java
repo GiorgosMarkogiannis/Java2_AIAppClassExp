@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+// tytyttfghmvjhmgmm
 public class MovieList {
     public String listType; // Τύπος λίστας (public ή private)
     public String creatorID; // ID του δημιουργού της λίστας
