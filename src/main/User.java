@@ -32,9 +32,26 @@ public class User {
         this.username=username;
     }
 
-    public void setPassword(String password) {
-        this.password=password;
-    }
+    public boolean setPassword(String password) {
+	    	boolean valid = true;
+	    		
+	        if (password.length()< 8 ) {
+	        	System.out.println("Password must have the minimum length of 8 characters ");
+	        	valid = false;
+	        }
+	    	if (!password.matches(".*[A-Z].*") ||       // Uppercase letter
+	    	        !password.matches(".*[a-z].*") ||       // Lowercase letter
+	    	        !password.matches(".*\\d.*") ||          // Digit
+	    	        !password.matches(".*[!@#$%^&*()].*")) {// Special character
+	    	        System.out.println("Password must contain Uppercase letter ,Lowercase letter,Digit and Special character");
+	    	        valid = false;
+	    	    }
+	    	  
+	    	if(valid = true) {
+	    	this.password=password;
+	       } return valid;
+	    	}
+
 
     public int getUserID() {
         return userID;
